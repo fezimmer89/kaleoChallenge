@@ -1,0 +1,202 @@
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.img-home-portfolio,
+.img-customer,
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.tab-pane {
+    margin-top: 15px;
+}
+
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 8em;
+}
+
+
+/* Page Styles */
+
+.logo {
+    width: 170px;
+    height: 40px;
+    margin-top: 5px;
+    float: left;
+    background-image: url(http://www.kaleosoftware.com/css/sprites.png);
+}
+
+.search {
+    padding-bottom: 10px;
+}
+
+.active {
+    color: white!important;
+}
+
+.search-body {
+    padding: 20px 0px;
+}
+
+@-moz-document url-prefix() {
+    .title {
+        white-space: nowrap;
+    }
+}
+
+.item-body {
+    height: 220px;
+    padding: 10px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #efefef;
+    overflow: hidden;
+}
+
+.item-body h4 {
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    max-width: 263px;
+}
+
+.item-list {
+    list-style: none;
+    padding: 0px;
+}
+
+.item-list li {
+    display: inline;
+}
+
+.item-list li:hover {
+    background-color: #428bca;
+}
+
+.item-list li:hover h4,
+.item-list li:hover .text-muted,
+.item-list li:hover h4:hover,
+.item-list li a:hover {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.page-select {
+    padding: 20px 0 0 40px;
+    float: left;
+}
+
+.tag-item {
+    display: -webkit-inline-box;
+    padding: 0px 5px;
+    background: #428bca;
+    border: 1px solid #999;
+    border-radius: 4px;
+    color: #fff;
+    margin:2px 2px;
+}
+
+.item-list li:hover .tag-item {
+    background: #fff;
+    color: #777;
+}
+
+.item-list li:hover .tag-item:hover {
+    background-color: #f3a025;
+    color: #fff;
+}
+
+.centered-container {
+    margin: 0 auto;
+    display: table;
+}
+
+.text-colored a {
+    color: #f3a025;
+}
+
+
+/* Footer Styles */
+
+footer {
+    padding: 25px 0px;
+    background-image: linear-gradient(to bottom, #3c3c3c 0, #222 100%);
+    color: #fff;
+    height: 100%;
+    /*box-shadow: 0px 500px 0px 500px #000;*/
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 767px) {
+    .carousel {
+        height: 70%;
+        /* increases the carousel height so it looks good on phones */
+    }
+    .logo {
+        padding-left: 10px;
+    }
+}
+
+
+/* override bootstrap */
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    background-color: #f3a025;
+    border-color: #f3a025;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover {
+    color: #000;
+    border-color: #ddd;
+}
+
+.pagination>li>a,
+.pagination>li>span,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+    color: #000;
+    background-color: #fff;
+}
+
+.input-group-addon:first-child {
+    background-color: #f3a025;
+}
+
+.selectize-control.multi .selectize-input > div {
+    background: #428bca;
+    color: #ffffff;
+    border: 1px solid #999
+}
+
+.item-footer {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    left: 25px;
+}

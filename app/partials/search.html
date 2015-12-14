@@ -1,0 +1,44 @@
+<!-- Page Content -->
+<div class="container search-body" ng-controller="searchCtrl">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="input-group search">
+                <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search Products" aria-describedby="sizing-addon2" ng-model="term" ng-change="search(1)">
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <selectize placeholder='Select tags...' options='tagOptions' config="config" ng-model="selectedTags" required='true'></selectize>
+        </div>
+    </div>
+    <div class="row padding-top" ng-show="promiseMonitor.isPending()">
+        <div class="col-sm-12 text-center">
+            <h3><i class="fa fa-circle-o-notch fa-spin"></i> Loading...</h3>
+        </div>
+    </div>
+    <div ng-hide="promiseMonitor.isPending()">
+        <div class="row">
+            <div class="col-sm-12 padding-top">
+                <ul class="item-list">
+                    <li class="col-md-3 col-sm-4 col-xs-6 clickable" data-ng-repeat="item in results">
+                        <a href="{{item.url}}">
+                            <div class="row item-body text-center">
+                                <h4>{{::item.title}}</h4>
+                                <div class="text-muted item-footer">
+                                    ({{::item.views_count}}) views | ({{::item.answers_count}}) answers
+                                    <br>
+                                    <div class="tag-item" ng-repeat="tag in item.tag_names" ng-click="addTag($event, tag)">
+                                        {{tag}}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <span ng-if="results.length == 0">Sorry, nothing matched your search...</span>
+            </div>
+        </div>
+        <div class="row" data-custom-pagination="search(pageNum)" data-manager="pageMeta" data-monitor="promiseMonitor">
+        </div>
+    </div>
+</div>

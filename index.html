@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <!-- Meta-Information -->
+    <title>Kaleo | Search</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Kaleo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700">
+    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+    <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link href="app/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="app/bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet"></link>
+    <link href="app/bower_components/selectize/dist/css/selectize.bootstrap2.css" rel="stylesheet"></link>
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-app="kaleoProject" ng-controller="mainCtrl">
+    <!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+    <!-- Our Website Content Goes Here -->
+    <div ng-include='"templates/header.html"'></div>
+    <div ui-view></div>
+    <div ng-include='"templates/footer.html"'></div>
+    <!-- Vendor: Javascripts -->
+    <script src="app/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app/bower_components/q/q.js"></script>
+    <script src="app/bower_components/lodash/lodash.js"></script>
+    <script src="app/bower_components/selectize/dist/js/standalone/selectize.js"></script>
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+    <script src="app/bower_components/angular/angular.min.js"></script>
+    <script src="app/bower_components/ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="app/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="app/bower_components/angular-selectize2/dist/angular-selectize.js"></script>
+    <!-- Our Website Javascripts -->
+    <script src="app/main.js"></script>
+    <script src="app/components/search/searchCtrl.js"></script>
+    <script src="app/components/services/promiseMonitor.js"></script>
+    <script src="app/components/directives/paginationDirective.js"></script>
+    <script src="app/components/directives/versionDirective.js"></script>
+</body>
+
+</html>
